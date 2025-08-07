@@ -13,7 +13,7 @@ export default function Map({ place }: MapProps) {
 
   useEffect(() => {
     if (mapRef.current && place) {
-      mapRef.current.flyTo([place.latitude, place.longitude]);
+      mapRef.current.flyTo([place.latitude, place.longitude], 12);
     }
   }, [place]);
   return (
